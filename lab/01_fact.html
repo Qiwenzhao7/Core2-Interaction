@@ -8,15 +8,15 @@
                 justify-content: center;
                 height: 100vh;
                 margin: 0;
-            }
-            .image-container {
-            text-align: center;
+    
+                .photo-container {
+            display: flex;
         }
 
-        .image-container img {
-            width: 140x; 
-            height: auto;
-            margin: 10px; 
+        .photo-container img {
+            width: auto;
+            height: 300px; /* Adjust the height as needed */
+            margin-right: 10px; /* Add margin for spacing between photos */
         }
 </style>
     </head>
@@ -30,12 +30,14 @@
        \ \__\   \ \__\ \__\ \_______\  \ \__\          \ \__\
         \|__|    \|__|\|__|\|_______|   \|__|           \|__|
                                                              
+        <div class="photo-container">
         <img src="1.png" alt="Image 1"width: 140x; 
         height: auto;
         margin: 10px; >
         <img src="2.jpg" alt="Image 2">
         <img src="3.jpg" alt="Image 3"> 
-        
+    </div>
+    
         I have a really cute dog
 
 
