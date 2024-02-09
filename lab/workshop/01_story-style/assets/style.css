@@ -1,0 +1,21 @@
+html{
+    background-color: palegoldenrod;
+    color: hotpink;
+}
+header {
+    text-align: center
+}
+h1 {
+    font-size:7rem ;
+    font-family: 'Patrick Hand', cursive;
+}
+section{
+    margin: 50px;
+    font-size:3rem ;
+    font-family: 'Patrick Hand', cursive;
+    text-align: center   
+}
+p{
+    font-size:4rem ;
+    font-family: 'Patrick Hand', cursive;
+    text-align: center  
