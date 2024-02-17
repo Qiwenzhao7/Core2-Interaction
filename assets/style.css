@@ -1,0 +1,38 @@
+html{
+    color: rgb(255, 184, 234);
+}
+body {
+    background: url('background.jpg');
+    background-size: cover;
+}
+h1 {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-size:3rem ;
+    font-style: normal;
+    text-align: center;
+    margin-top: 35px;
+}
+h4 {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-size:1.5rem ;
+    font-style: normal;
+    text-align: center;
+}
+h2{
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-size:2rem ;
+    font-style: normal;
+    text-align: center;
+    background-color: rgba(191, 255, 237, 0.488);
+}
+h3{
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-size:1.1rem ;
+    font-style: normal;
+    text-align: center;
+    margin-top: 5px;
+}
