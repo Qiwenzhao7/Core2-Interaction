@@ -1,5 +1,5 @@
 html{
-    color: rgb(255, 184, 234);
+    color: rgb(255, 124, 198);
 }
 body {
     background: url('background.jpg');
@@ -36,3 +36,10 @@ h3{
     text-align: center;
     margin-top: 5px;
 }
+.link{
+    color: rgb(0, 0, 0); /* Default color for links */
+  }
+  
+  .link:hover {
+    color: rgb(79, 79, 79); /* Color when hovering over the link */
+  }
