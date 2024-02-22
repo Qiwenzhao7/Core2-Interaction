@@ -37,9 +37,8 @@ h3{
     margin-top: 5px;
 }
 .link{
-    color: rgb(0, 0, 0); /* Default color for links */
+    color: rgb(0, 0, 0); 
   }
   
   .link:hover {
-    color: rgb(79, 79, 79); /* Color when hovering over the link */
-  }
+    color: rgb(79, 79, 79); }
