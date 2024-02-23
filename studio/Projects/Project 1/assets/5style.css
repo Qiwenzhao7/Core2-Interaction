@@ -71,6 +71,12 @@ section span:nth-child(10) {
 section span:nth-child(11) {
   animation-delay: 11s;
 }
+section span:nth-child(12) {
+  animation-delay: 12s;
+}
+section span:nth-child(13) {
+  animation-delay: 13s;
+}
 
 section span:hover {
   font-weight: 100;
