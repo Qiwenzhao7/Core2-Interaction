@@ -132,5 +132,11 @@ section span:hover {
 .link1:hover {
   color: rgb(255, 255, 255); /* Color when hovering over the link */
 }
-
+h1 {
+  margin-top: 30%;  
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  font-size: 1rem ;
+}
 
