@@ -1,0 +1,37 @@
+html{
+    background-color: rgb(255, 250, 191);
+    color: hotpink;
+}
+header {
+    text-align: center
+}
+h1 {
+    font-size:6rem ;
+    font-family: 'Patrick Hand', cursive;
+}
+section{
+    margin: 150px;
+    font-size:2rem ;
+    font-family: 'Patrick Hand', cursive;
+    text-align: center   
+}
+img,video{
+    width: 100%;
+    margin-top: 10px;
+}
+p{
+    font-size:2.5rem ;
+    font-family: 'Patrick Hand', cursive;
+    text-align: center  
+}
+#PartOne{background-color: rgba(199, 255, 236, 0.837);}
+#PartTwo{background-color: rgba(255, 206, 246, 0.946);}
+#PartThree{background-color: rgba(199, 255, 236, 0.837);}
+#PartFour{background-color: rgba(255, 206, 246, 0.946);}
+#PartFive{background-color: rgba(199, 255, 236, 0.837);}
+
+.Nav-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
