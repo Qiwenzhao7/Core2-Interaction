@@ -41,6 +41,3 @@ function insertCostumes(costumes) {
 	});
 
 }
-
-
-insertCostumes(costumes);
