@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffc4e675; /* Background color for the entire document */
+    color: #000000;
+    border: 2px solid #333;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px; 
+  font-family: "REM", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+.Header-title {
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px; 
+    background-color: #ffc4e3b3;
+}
+.Page-header{
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px; 
+    background-color: #ffc4e675;
+}
+.Meta{
+    border: 2px solid #333;
+    padding: 10px;
+    width: fit-content; /* Adjusts the width of the frame to fit the content */
+    margin: 20px auto; /* Centers the frame horizontally */
+}
+.div{
+    border: 2px solid #333;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px; 
+}
