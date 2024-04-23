@@ -1,1132 +1,129 @@
+body, html {
+   margin: 0;
+   padding: 0;
+   height: 100%;
+   overflow: hidden;
+}
 
-body {
-background: url('back.PNG'); 
-background-size: cover;
-background-color: lightpink;
+#videoBG {
+   position: fixed;
+   top: 0;
+   left: 0;
+   min-width: 100%;
+   min-height: 100%;
+   width: auto;
+   height: auto;
+   z-index: -1;
 }
-h2 {font-family: 'Crimson Text', serif;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.89);
-    font-size: 12rem;
-    padding-left: 3.6rem /*!main_margin*/;
-    padding-right: 3.6rem /
+
+.title {
+   position: absolute;
+   top: 20px; /* Adjust top position of the title as needed */
+   left: 50%;
+   transform: translateX(-50%);
+   color: white; /* Adjust title color as needed */
+   font-size: 36px; /* Adjust title font size as needed */
+   z-index: 2; /* Ensure title is above the video background */
 }
-/* Define the initial styles for the text */
-h2{
-    transition: all 0.3s; /* Add a smooth transition effect */
+
+.content {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white; /* Adjust text color as needed */
+   font-size: 24px; /* Adjust font size as needed */
+   text-align: center;
+   z-index: 1;
 }
-/* Define the hover styles for the text */
-h2:hover {
-    color: #fff; /* Change the text color to white on hover */
-    text-shadow: 0 0 10px yellow; /* Add a yellow outline glow */
+
+a {
+   display: inline-block;
+   margin: 10px;
+   position: absolute;
+   z-index: 2; /* Ensure images are above the video background */
 }
-#image1{
-    width: 320px; /* Set the container width as per your requirements */
-    height: 520px; /* Set the container height as per your requirements */
+
+a img {
+   width: 100px; /* Adjust image size as needed */
+   height: auto;
+   transition: transform 0.5s;
+}
+
+a:hover img {
+   transform: rotate(5deg);
+}
+
+.shake:hover img {
+   animation: shake 0.5s infinite alternate;
+}
+
+@keyframes shake {
+   0% { transform: translateX(-5px); }
+   100% { transform: translateX(5px); }
+}
+
+.link1 {
     position: absolute;
-    top: 300px; /* Position from the top (adjust as needed) */
-    left: 100px;
+    top: 250px; /* Adjust top position of link 1 as needed */
+    left: 60px; /* Adjust left position of link 1 as needed */
+    color: white; /* Adjust link color as needed */
+    font-size: 20px; /* Adjust link font size as needed */
+    z-index: 2; /* Ensure link is above the video background */
 }
-#image1:hover, .shakeimg:hover {
-         animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-         -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-         -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-         -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-         transform:translate3d(0,0,0); 
-         backface-visibility:hidden; 
-         perspective:1000px;
-      }
 
-      @keyframes shake { 
-         10%, 90% { transform:translate3d(-1px,0,0) }
-         20%, 80% { transform:translate3d(2px,0,0) }
-         30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-         40%, 60% { transform:translate3d(4px,0,0) }
-      }
+.link2 {
+    position: absolute;
+    top: 200px; /* Adjust top position of link 2 as needed */
+    right: 150px; /* Adjust right position of link 2 as needed */
+    color: white; /* Adjust link color as needed */
+    font-size: 20px; /* Adjust link font size as needed */
+    z-index: 2; /* Ensure link is above the video background */
+}
 
-      @-webkit-keyframes shake { 
-         10%, 90% { transform:translate3d(-1px,0,0) }
-         20%, 80% { transform:translate3d(2px,0,0) }
-         30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-         40%, 60% { transform:translate3d(4px,0,0) }
-      }
+.link3 {
+    position: absolute;
+    bottom: 50px; /* Adjust bottom position of link 3 as needed */
+    left: 300px; /* Adjust left position of link 3 as needed */
+    color: white; /* Adjust link color as needed */
+    font-size: 20px; /* Adjust link font size as needed */
+    z-index: 2; /* Ensure link is above the video background */
+}
 
-      @-moz-keyframes shake {
-         10%,90% { transform:translate3d(-1px,0,0) }
-         20%, 80% { transform:translate3d(2px,0,0) }
-         30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-         40%, 60% { transform:translate3d(4px,0,0) }
-      }
-      #image2{
-         width: 320px; /* Set the container width as per your requirements */
-         height: 520px; /* Set the container height as per your requirements */
-         position: absolute;
-         top: 300px; /* Position from the top (adjust as needed) */
-         left: 350px;
-     }
-     #image2:hover, .shakeimg:hover {
-              animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-              -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-              -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-              -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-              transform:translate3d(0,0,0); 
-              backface-visibility:hidden; 
-              perspective:1000px;
-           }
-     
-           @keyframes shake { 
-              10%, 90% { transform:translate3d(-1px,0,0) }
-              20%, 80% { transform:translate3d(2px,0,0) }
-              30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-              40%, 60% { transform:translate3d(4px,0,0) }
-           }
-     
-           @-webkit-keyframes shake { 
-              10%, 90% { transform:translate3d(-1px,0,0) }
-              20%, 80% { transform:translate3d(2px,0,0) }
-              30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-              40%, 60% { transform:translate3d(4px,0,0) }
-           }
-     
-           @-moz-keyframes shake {
-              10%,90% { transform:translate3d(-1px,0,0) }
-              20%, 80% { transform:translate3d(2px,0,0) }
-              30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-              40%, 60% { transform:translate3d(4px,0,0) }
-           }
-     
-           #image3{
-            width: 320px; /* Set the container width as per your requirements */
-            height: 520px; /* Set the container height as per your requirements */
-            position: absolute;
-            top: 300px; /* Position from the top (adjust as needed) */
-            left: 600px;
-        }
-        #image3:hover, .shakeimg:hover {
-                 animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                 -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                 -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                 -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                 transform:translate3d(0,0,0); 
-                 backface-visibility:hidden; 
-                 perspective:1000px;
-              }
-        
-              @keyframes shake { 
-                 10%, 90% { transform:translate3d(-1px,0,0) }
-                 20%, 80% { transform:translate3d(2px,0,0) }
-                 30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                 40%, 60% { transform:translate3d(4px,0,0) }
-              }
-        
-              @-webkit-keyframes shake { 
-                 10%, 90% { transform:translate3d(-1px,0,0) }
-                 20%, 80% { transform:translate3d(2px,0,0) }
-                 30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                 40%, 60% { transform:translate3d(4px,0,0) }
-              }
-        
-              @-moz-keyframes shake {
-                 10%,90% { transform:translate3d(-1px,0,0) }
-                 20%, 80% { transform:translate3d(2px,0,0) }
-                 30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                 40%, 60% { transform:translate3d(4px,0,0) }
-              }
-              #image4{
-               width: 320px; /* Set the container width as per your requirements */
-               height: 520px; /* Set the container height as per your requirements */
-               position: absolute;
-               top: 300px; /* Position from the top (adjust as needed) */
-               left: 850px;
-           }
-           #image4:hover, .shakeimg:hover {
-                    animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                    -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                    -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                    -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                    transform:translate3d(0,0,0); 
-                    backface-visibility:hidden; 
-                    perspective:1000px;
-                 }
-           
-                 @keyframes shake { 
-                    10%, 90% { transform:translate3d(-1px,0,0) }
-                    20%, 80% { transform:translate3d(2px,0,0) }
-                    30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                    40%, 60% { transform:translate3d(4px,0,0) }
-                 }
-           
-                 @-webkit-keyframes shake { 
-                    10%, 90% { transform:translate3d(-1px,0,0) }
-                    20%, 80% { transform:translate3d(2px,0,0) }
-                    30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                    40%, 60% { transform:translate3d(4px,0,0) }
-                 }
-           
-                 @-moz-keyframes shake {
-                    10%,90% { transform:translate3d(-1px,0,0) }
-                    20%, 80% { transform:translate3d(2px,0,0) }
-                    30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                    40%, 60% { transform:translate3d(4px,0,0) }
-                 }     
-                  #image5{
-                  width: 320px; /* Set the container width as per your requirements */
-                  height: 520px; /* Set the container height as per your requirements */
-                  position: absolute;
-                  top: 300px; /* Position from the top (adjust as needed) */
-                  left: 1100px;
-              }
-              #image5:hover, .shakeimg:hover {
-                       animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                       -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                       -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                       -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                       transform:translate3d(0,0,0); 
-                       backface-visibility:hidden; 
-                       perspective:1000px;
-                    }
-              
-                    @keyframes shake { 
-                       10%, 90% { transform:translate3d(-1px,0,0) }
-                       20%, 80% { transform:translate3d(2px,0,0) }
-                       30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                       40%, 60% { transform:translate3d(4px,0,0) }
-                    }
-              
-                    @-webkit-keyframes shake { 
-                       10%, 90% { transform:translate3d(-1px,0,0) }
-                       20%, 80% { transform:translate3d(2px,0,0) }
-                       30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                       40%, 60% { transform:translate3d(4px,0,0) }
-                    }
-              
-                    @-moz-keyframes shake {
-                       10%,90% { transform:translate3d(-1px,0,0) }
-                       20%, 80% { transform:translate3d(2px,0,0) }
-                       30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                       40%, 60% { transform:translate3d(4px,0,0) }
-                    }
-                  
-                    #image6{
-                     width: 320px; /* Set the container width as per your requirements */
-                     height: 520px; /* Set the container height as per your requirements */
-                     position: absolute;
-                     top: 600px; /* Position from the top (adjust as needed) */
-                     left: 100px;
-                 }
-                 #image6:hover, .shakeimg:hover {
-                          animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                          -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                          -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                          -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                          transform:translate3d(0,0,0); 
-                          backface-visibility:hidden; 
-                          perspective:1000px;
-                       }
-                 
-                       @keyframes shake { 
-                          10%, 90% { transform:translate3d(-1px,0,0) }
-                          20%, 80% { transform:translate3d(2px,0,0) }
-                          30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                          40%, 60% { transform:translate3d(4px,0,0) }
-                       }
-                 
-                       @-webkit-keyframes shake { 
-                          10%, 90% { transform:translate3d(-1px,0,0) }
-                          20%, 80% { transform:translate3d(2px,0,0) }
-                          30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                          40%, 60% { transform:translate3d(4px,0,0) }
-                       }
-                 
-                       @-moz-keyframes shake {
-                          10%,90% { transform:translate3d(-1px,0,0) }
-                          20%, 80% { transform:translate3d(2px,0,0) }
-                          30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                          40%, 60% { transform:translate3d(4px,0,0) }
-                       }
-                       #image7{
-                          width: 320px; /* Set the container width as per your requirements */
-                          height: 520px; /* Set the container height as per your requirements */
-                          position: absolute;
-                          top: 600px; /* Position from the top (adjust as needed) */
-                          left: 350px;
-                      }
-                      #image7:hover, .shakeimg:hover {
-                               animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                               -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                               -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                               -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                               transform:translate3d(0,0,0); 
-                               backface-visibility:hidden; 
-                               perspective:1000px;
-                            }
-                      
-                            @keyframes shake { 
-                               10%, 90% { transform:translate3d(-1px,0,0) }
-                               20%, 80% { transform:translate3d(2px,0,0) }
-                               30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                               40%, 60% { transform:translate3d(4px,0,0) }
-                            }
-                      
-                            @-webkit-keyframes shake { 
-                               10%, 90% { transform:translate3d(-1px,0,0) }
-                               20%, 80% { transform:translate3d(2px,0,0) }
-                               30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                               40%, 60% { transform:translate3d(4px,0,0) }
-                            }
-                      
-                            @-moz-keyframes shake {
-                               10%,90% { transform:translate3d(-1px,0,0) }
-                               20%, 80% { transform:translate3d(2px,0,0) }
-                               30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                               40%, 60% { transform:translate3d(4px,0,0) }
-                            }
-                      
-                            #image8{
-                             width: 320px; /* Set the container width as per your requirements */
-                             height: 520px; /* Set the container height as per your requirements */
-                             position: absolute;
-                             top: 600px; /* Position from the top (adjust as needed) */
-                             left: 600px;
-                         }
-                         #image8:hover, .shakeimg:hover {
-                                  animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                  -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                  -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                  -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                  transform:translate3d(0,0,0); 
-                                  backface-visibility:hidden; 
-                                  perspective:1000px;
-                               }
-                         
-                               @keyframes shake { 
-                                  10%, 90% { transform:translate3d(-1px,0,0) }
-                                  20%, 80% { transform:translate3d(2px,0,0) }
-                                  30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                  40%, 60% { transform:translate3d(4px,0,0) }
-                               }
-                         
-                               @-webkit-keyframes shake { 
-                                  10%, 90% { transform:translate3d(-1px,0,0) }
-                                  20%, 80% { transform:translate3d(2px,0,0) }
-                                  30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                  40%, 60% { transform:translate3d(4px,0,0) }
-                               }
-                         
-                               @-moz-keyframes shake {
-                                  10%,90% { transform:translate3d(-1px,0,0) }
-                                  20%, 80% { transform:translate3d(2px,0,0) }
-                                  30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                  40%, 60% { transform:translate3d(4px,0,0) }
-                               }
-                               #image9{
-                                width: 320px; /* Set the container width as per your requirements */
-                                height: 520px; /* Set the container height as per your requirements */
-                                position: absolute;
-                                top: 600px; /* Position from the top (adjust as needed) */
-                                left: 850px;
-                            }
-                            #image9:hover, .shakeimg:hover {
-                                     animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                     -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                     -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                     -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                     transform:translate3d(0,0,0); 
-                                     backface-visibility:hidden; 
-                                     perspective:1000px;
-                                  }
-                            
-                                  @keyframes shake { 
-                                     10%, 90% { transform:translate3d(-1px,0,0) }
-                                     20%, 80% { transform:translate3d(2px,0,0) }
-                                     30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                     40%, 60% { transform:translate3d(4px,0,0) }
-                                  }
-                            
-                                  @-webkit-keyframes shake { 
-                                     10%, 90% { transform:translate3d(-1px,0,0) }
-                                     20%, 80% { transform:translate3d(2px,0,0) }
-                                     30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                     40%, 60% { transform:translate3d(4px,0,0) }
-                                  }
-                            
-                                  @-moz-keyframes shake {
-                                     10%,90% { transform:translate3d(-1px,0,0) }
-                                     20%, 80% { transform:translate3d(2px,0,0) }
-                                     30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                     40%, 60% { transform:translate3d(4px,0,0) }
-                                  }     
-                                   #image10{
-                                   width: 320px; /* Set the container width as per your requirements */
-                                   height: 520px; /* Set the container height as per your requirements */
-                                   position: absolute;
-                                   top: 600px; /* Position from the top (adjust as needed) */
-                                   left: 1100px;
-                               }
-                               #image10:hover, .shakeimg:hover {
-                                        animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                        -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                        -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                        -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                        transform:translate3d(0,0,0); 
-                                        backface-visibility:hidden; 
-                                        perspective:1000px;
-                                     }
-                               
-                                     @keyframes shake { 
-                                        10%, 90% { transform:translate3d(-1px,0,0) }
-                                        20%, 80% { transform:translate3d(2px,0,0) }
-                                        30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                        40%, 60% { transform:translate3d(4px,0,0) }
-                                     }
-                               
-                                     @-webkit-keyframes shake { 
-                                        10%, 90% { transform:translate3d(-1px,0,0) }
-                                        20%, 80% { transform:translate3d(2px,0,0) }
-                                        30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                        40%, 60% { transform:translate3d(4px,0,0) }
-                                     }
-                               
-                                     @-moz-keyframes shake {
-                                        10%,90% { transform:translate3d(-1px,0,0) }
-                                        20%, 80% { transform:translate3d(2px,0,0) }
-                                        30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                        40%, 60% { transform:translate3d(4px,0,0) }
-                                     } 
-                                     #image11{
-                                       width: 320px; /* Set the container width as per your requirements */
-                                       height: 520px; /* Set the container height as per your requirements */
-                                       position: absolute;
-                                       top: 900px; /* Position from the top (adjust as needed) */
-                                       left: 100px;
-                                   }
-                                   #image11:hover, .shakeimg:hover {
-                                            animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                            -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                            -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                            -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                            transform:translate3d(0,0,0); 
-                                            backface-visibility:hidden; 
-                                            perspective:1000px;
-                                         }
-                                   
-                                         @keyframes shake { 
-                                            10%, 90% { transform:translate3d(-1px,0,0) }
-                                            20%, 80% { transform:translate3d(2px,0,0) }
-                                            30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                            40%, 60% { transform:translate3d(4px,0,0) }
-                                         }
-                                   
-                                         @-webkit-keyframes shake { 
-                                            10%, 90% { transform:translate3d(-1px,0,0) }
-                                            20%, 80% { transform:translate3d(2px,0,0) }
-                                            30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                            40%, 60% { transform:translate3d(4px,0,0) }
-                                         }
-                                   
-                                         @-moz-keyframes shake {
-                                            10%,90% { transform:translate3d(-1px,0,0) }
-                                            20%, 80% { transform:translate3d(2px,0,0) }
-                                            30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                            40%, 60% { transform:translate3d(4px,0,0) }
-                                         }
-                                         #image12{
-                                            width: 320px; /* Set the container width as per your requirements */
-                                            height: 520px; /* Set the container height as per your requirements */
-                                            position: absolute;
-                                            top: 900px; /* Position from the top (adjust as needed) */
-                                            left: 350px;
-                                        }
-                                        #image12:hover, .shakeimg:hover {
-                                                 animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                 -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                 -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                 -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                 transform:translate3d(0,0,0); 
-                                                 backface-visibility:hidden; 
-                                                 perspective:1000px;
-                                              }
-                                        
-                                              @keyframes shake { 
-                                                 10%, 90% { transform:translate3d(-1px,0,0) }
-                                                 20%, 80% { transform:translate3d(2px,0,0) }
-                                                 30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                 40%, 60% { transform:translate3d(4px,0,0) }
-                                              }
-                                        
-                                              @-webkit-keyframes shake { 
-                                                 10%, 90% { transform:translate3d(-1px,0,0) }
-                                                 20%, 80% { transform:translate3d(2px,0,0) }
-                                                 30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                 40%, 60% { transform:translate3d(4px,0,0) }
-                                              }
-                                        
-                                              @-moz-keyframes shake {
-                                                 10%,90% { transform:translate3d(-1px,0,0) }
-                                                 20%, 80% { transform:translate3d(2px,0,0) }
-                                                 30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                 40%, 60% { transform:translate3d(4px,0,0) }
-                                              }
-                                        
-                                              #image13{
-                                               width: 320px; /* Set the container width as per your requirements */
-                                               height: 520px; /* Set the container height as per your requirements */
-                                               position: absolute;
-                                               top: 900px; /* Position from the top (adjust as needed) */
-                                               left: 600px;
-                                           }
-                                           #image13:hover, .shakeimg:hover {
-                                                    animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                    -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                    -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                    -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                    transform:translate3d(0,0,0); 
-                                                    backface-visibility:hidden; 
-                                                    perspective:1000px;
-                                                 }
-                                           
-                                                 @keyframes shake { 
-                                                    10%, 90% { transform:translate3d(-1px,0,0) }
-                                                    20%, 80% { transform:translate3d(2px,0,0) }
-                                                    30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                    40%, 60% { transform:translate3d(4px,0,0) }
-                                                 }
-                                           
-                                                 @-webkit-keyframes shake { 
-                                                    10%, 90% { transform:translate3d(-1px,0,0) }
-                                                    20%, 80% { transform:translate3d(2px,0,0) }
-                                                    30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                    40%, 60% { transform:translate3d(4px,0,0) }
-                                                 }
-                                           
-                                                 @-moz-keyframes shake {
-                                                    10%,90% { transform:translate3d(-1px,0,0) }
-                                                    20%, 80% { transform:translate3d(2px,0,0) }
-                                                    30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                    40%, 60% { transform:translate3d(4px,0,0) }
-                                                 }
-                                                 #image14{
-                                                  width: 320px; /* Set the container width as per your requirements */
-                                                  height: 520px; /* Set the container height as per your requirements */
-                                                  position: absolute;
-                                                  top: 900px; /* Position from the top (adjust as needed) */
-                                                  left: 850px;
-                                              }
-                                              #image14:hover, .shakeimg:hover {
-                                                       animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                       -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                       -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                       -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                       transform:translate3d(0,0,0); 
-                                                       backface-visibility:hidden; 
-                                                       perspective:1000px;
-                                                    }
-                                              
-                                                    @keyframes shake { 
-                                                       10%, 90% { transform:translate3d(-1px,0,0) }
-                                                       20%, 80% { transform:translate3d(2px,0,0) }
-                                                       30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                       40%, 60% { transform:translate3d(4px,0,0) }
-                                                    }
-                                              
-                                                    @-webkit-keyframes shake { 
-                                                       10%, 90% { transform:translate3d(-1px,0,0) }
-                                                       20%, 80% { transform:translate3d(2px,0,0) }
-                                                       30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                       40%, 60% { transform:translate3d(4px,0,0) }
-                                                    }
-                                              
-                                                    @-moz-keyframes shake {
-                                                       10%,90% { transform:translate3d(-1px,0,0) }
-                                                       20%, 80% { transform:translate3d(2px,0,0) }
-                                                       30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                       40%, 60% { transform:translate3d(4px,0,0) }
-                                                    }     
-                                                     #image15{
-                                                     width: 320px; /* Set the container width as per your requirements */
-                                                     height: 520px; /* Set the container height as per your requirements */
-                                                     position: absolute;
-                                                     top: 900px; /* Position from the top (adjust as needed) */
-                                                     left: 1100px;
-                                                 }
-                                                 #image15:hover, .shakeimg:hover {
-                                                          animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                          -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                          -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                          -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                          transform:translate3d(0,0,0); 
-                                                          backface-visibility:hidden; 
-                                                          perspective:1000px;
-                                                       }
-                                                 
-                                                       @keyframes shake { 
-                                                          10%, 90% { transform:translate3d(-1px,0,0) }
-                                                          20%, 80% { transform:translate3d(2px,0,0) }
-                                                          30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                          40%, 60% { transform:translate3d(4px,0,0) }
-                                                       }
-                                                 
-                                                       @-webkit-keyframes shake { 
-                                                          10%, 90% { transform:translate3d(-1px,0,0) }
-                                                          20%, 80% { transform:translate3d(2px,0,0) }
-                                                          30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                          40%, 60% { transform:translate3d(4px,0,0) }
-                                                       }
-                                                 
-                                                       @-moz-keyframes shake {
-                                                          10%,90% { transform:translate3d(-1px,0,0) }
-                                                          20%, 80% { transform:translate3d(2px,0,0) }
-                                                          30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                          40%, 60% { transform:translate3d(4px,0,0) }
-                                                       } 
-                                                        #image11:hover, .shakeimg:hover {
-                                            animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                            -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                            -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                            -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                            transform:translate3d(0,0,0); 
-                                            backface-visibility:hidden; 
-                                            perspective:1000px;
-                                         }
-                                   
-                                         @keyframes shake { 
-                                            10%, 90% { transform:translate3d(-1px,0,0) }
-                                            20%, 80% { transform:translate3d(2px,0,0) }
-                                            30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                            40%, 60% { transform:translate3d(4px,0,0) }
-                                         }
-                                   
-                                         @-webkit-keyframes shake { 
-                                            10%, 90% { transform:translate3d(-1px,0,0) }
-                                            20%, 80% { transform:translate3d(2px,0,0) }
-                                            30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                            40%, 60% { transform:translate3d(4px,0,0) }
-                                         }
-                                   
-                                         @-moz-keyframes shake {
-                                            10%,90% { transform:translate3d(-1px,0,0) }
-                                            20%, 80% { transform:translate3d(2px,0,0) }
-                                            30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                            40%, 60% { transform:translate3d(4px,0,0) }
-                                         }
-                                         #image12{
-                                            width: 320px; /* Set the container width as per your requirements */
-                                            height: 520px; /* Set the container height as per your requirements */
-                                            position: absolute;
-                                            top: 900px; /* Position from the top (adjust as needed) */
-                                            left: 350px;
-                                        }
-                                        #image12:hover, .shakeimg:hover {
-                                                 animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                 -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                 -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                 -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                 transform:translate3d(0,0,0); 
-                                                 backface-visibility:hidden; 
-                                                 perspective:1000px;
-                                              }
-                                        
-                                              @keyframes shake { 
-                                                 10%, 90% { transform:translate3d(-1px,0,0) }
-                                                 20%, 80% { transform:translate3d(2px,0,0) }
-                                                 30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                 40%, 60% { transform:translate3d(4px,0,0) }
-                                              }
-                                        
-                                              @-webkit-keyframes shake { 
-                                                 10%, 90% { transform:translate3d(-1px,0,0) }
-                                                 20%, 80% { transform:translate3d(2px,0,0) }
-                                                 30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                 40%, 60% { transform:translate3d(4px,0,0) }
-                                              }
-                                        
-                                              @-moz-keyframes shake {
-                                                 10%,90% { transform:translate3d(-1px,0,0) }
-                                                 20%, 80% { transform:translate3d(2px,0,0) }
-                                                 30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                 40%, 60% { transform:translate3d(4px,0,0) }
-                                              }
-                                        
-                                              #image13{
-                                               width: 320px; /* Set the container width as per your requirements */
-                                               height: 520px; /* Set the container height as per your requirements */
-                                               position: absolute;
-                                               top: 900px; /* Position from the top (adjust as needed) */
-                                               left: 600px;
-                                           }
-                                           #image13:hover, .shakeimg:hover {
-                                                    animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                    -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                    -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                    -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                    transform:translate3d(0,0,0); 
-                                                    backface-visibility:hidden; 
-                                                    perspective:1000px;
-                                                 }
-                                           
-                                                 @keyframes shake { 
-                                                    10%, 90% { transform:translate3d(-1px,0,0) }
-                                                    20%, 80% { transform:translate3d(2px,0,0) }
-                                                    30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                    40%, 60% { transform:translate3d(4px,0,0) }
-                                                 }
-                                           
-                                                 @-webkit-keyframes shake { 
-                                                    10%, 90% { transform:translate3d(-1px,0,0) }
-                                                    20%, 80% { transform:translate3d(2px,0,0) }
-                                                    30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                    40%, 60% { transform:translate3d(4px,0,0) }
-                                                 }
-                                           
-                                                 @-moz-keyframes shake {
-                                                    10%,90% { transform:translate3d(-1px,0,0) }
-                                                    20%, 80% { transform:translate3d(2px,0,0) }
-                                                    30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                    40%, 60% { transform:translate3d(4px,0,0) }
-                                                 }
-                                                 #image14{
-                                                  width: 320px; /* Set the container width as per your requirements */
-                                                  height: 520px; /* Set the container height as per your requirements */
-                                                  position: absolute;
-                                                  top: 900px; /* Position from the top (adjust as needed) */
-                                                  left: 850px;
-                                              }
-                                              #image14:hover, .shakeimg:hover {
-                                                       animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                       -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                       -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                       -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                       transform:translate3d(0,0,0); 
-                                                       backface-visibility:hidden; 
-                                                       perspective:1000px;
-                                                    }
-                                              
-                                                    @keyframes shake { 
-                                                       10%, 90% { transform:translate3d(-1px,0,0) }
-                                                       20%, 80% { transform:translate3d(2px,0,0) }
-                                                       30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                       40%, 60% { transform:translate3d(4px,0,0) }
-                                                    }
-                                              
-                                                    @-webkit-keyframes shake { 
-                                                       10%, 90% { transform:translate3d(-1px,0,0) }
-                                                       20%, 80% { transform:translate3d(2px,0,0) }
-                                                       30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                       40%, 60% { transform:translate3d(4px,0,0) }
-                                                    }
-                                              
-                                                    @-moz-keyframes shake {
-                                                       10%,90% { transform:translate3d(-1px,0,0) }
-                                                       20%, 80% { transform:translate3d(2px,0,0) }
-                                                       30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                       40%, 60% { transform:translate3d(4px,0,0) }
-                                                    }     
-                                                     #image15{
-                                                     width: 320px; /* Set the container width as per your requirements */
-                                                     height: 520px; /* Set the container height as per your requirements */
-                                                     position: absolute;
-                                                     top: 900px; /* Position from the top (adjust as needed) */
-                                                     left: 1100px;
-                                                 }
-                                                 #image15:hover, .shakeimg:hover {
-                                                          animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                          -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                          -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                          -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                          transform:translate3d(0,0,0); 
-                                                          backface-visibility:hidden; 
-                                                          perspective:1000px;
-                                                       }
-                                                 
-                                                       @keyframes shake { 
-                                                          10%, 90% { transform:translate3d(-1px,0,0) }
-                                                          20%, 80% { transform:translate3d(2px,0,0) }
-                                                          30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                          40%, 60% { transform:translate3d(4px,0,0) }
-                                                       }
-                                                 
-                                                       @-webkit-keyframes shake { 
-                                                          10%, 90% { transform:translate3d(-1px,0,0) }
-                                                          20%, 80% { transform:translate3d(2px,0,0) }
-                                                          30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                          40%, 60% { transform:translate3d(4px,0,0) }
-                                                       }
-                                                 
-                                                       @-moz-keyframes shake {
-                                                          10%,90% { transform:translate3d(-1px,0,0) }
-                                                          20%, 80% { transform:translate3d(2px,0,0) }
-                                                          30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                          40%, 60% { transform:translate3d(4px,0,0) }
-                                                       } 
-                                                       #image16{
-                                                         width: 320px; /* Set the container width as per your requirements */
-                                                         height: 520px; /* Set the container height as per your requirements */
-                                                         position: absolute;
-                                                         top: 1200px; /* Position from the top (adjust as needed) */
-                                                         left: 100px;
-                                                     }
-                                                     #image16:hover, .shakeimg:hover {
-                                                              animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                              -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                              -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                              -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                              transform:translate3d(0,0,0); 
-                                                              backface-visibility:hidden; 
-                                                              perspective:1000px;
-                                                           }
-                                                     
-                                                           @keyframes shake { 
-                                                              10%, 90% { transform:translate3d(-1px,0,0) }
-                                                              20%, 80% { transform:translate3d(2px,0,0) }
-                                                              30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                              40%, 60% { transform:translate3d(4px,0,0) }
-                                                           }
-                                                     
-                                                           @-webkit-keyframes shake { 
-                                                              10%, 90% { transform:translate3d(-1px,0,0) }
-                                                              20%, 80% { transform:translate3d(2px,0,0) }
-                                                              30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                              40%, 60% { transform:translate3d(4px,0,0) }
-                                                           }
-                                                     
-                                                           @-moz-keyframes shake {
-                                                              10%,90% { transform:translate3d(-1px,0,0) }
-                                                              20%, 80% { transform:translate3d(2px,0,0) }
-                                                              30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                              40%, 60% { transform:translate3d(4px,0,0) }
-                                                           }
-                                                           #image17{
-                                                              width: 320px; /* Set the container width as per your requirements */
-                                                              height: 520px; /* Set the container height as per your requirements */
-                                                              position: absolute;
-                                                              top: 1200px; /* Position from the top (adjust as needed) */
-                                                              left: 350px;
-                                                          }
-                                                          #image17:hover, .shakeimg:hover {
-                                                                   animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                   -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                   -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                   -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                   transform:translate3d(0,0,0); 
-                                                                   backface-visibility:hidden; 
-                                                                   perspective:1000px;
-                                                                }
-                                                          
-                                                                @keyframes shake { 
-                                                                   10%, 90% { transform:translate3d(-1px,0,0) }
-                                                                   20%, 80% { transform:translate3d(2px,0,0) }
-                                                                   30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                                   40%, 60% { transform:translate3d(4px,0,0) }
-                                                                }
-                                                          
-                                                                @-webkit-keyframes shake { 
-                                                                   10%, 90% { transform:translate3d(-1px,0,0) }
-                                                                   20%, 80% { transform:translate3d(2px,0,0) }
-                                                                   30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                                   40%, 60% { transform:translate3d(4px,0,0) }
-                                                                }
-                                                          
-                                                                @-moz-keyframes shake {
-                                                                   10%,90% { transform:translate3d(-1px,0,0) }
-                                                                   20%, 80% { transform:translate3d(2px,0,0) }
-                                                                   30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                                   40%, 60% { transform:translate3d(4px,0,0) }
-                                                                }
-                                                          
-                                                                #image18{
-                                                                 width: 320px; /* Set the container width as per your requirements */
-                                                                 height: 520px; /* Set the container height as per your requirements */
-                                                                 position: absolute;
-                                                                 top: 1200px; /* Position from the top (adjust as needed) */
-                                                                 left: 600px;
-                                                             }
-                                                             #image18:hover, .shakeimg:hover {
-                                                                      animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                      -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                      -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                      -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                      transform:translate3d(0,0,0); 
-                                                                      backface-visibility:hidden; 
-                                                                      perspective:1000px;
-                                                                   }
-                                                             
-                                                                   @keyframes shake { 
-                                                                      10%, 90% { transform:translate3d(-1px,0,0) }
-                                                                      20%, 80% { transform:translate3d(2px,0,0) }
-                                                                      30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                                      40%, 60% { transform:translate3d(4px,0,0) }
-                                                                   }
-                                                             
-                                                                   @-webkit-keyframes shake { 
-                                                                      10%, 90% { transform:translate3d(-1px,0,0) }
-                                                                      20%, 80% { transform:translate3d(2px,0,0) }
-                                                                      30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                                      40%, 60% { transform:translate3d(4px,0,0) }
-                                                                   }
-                                                             
-                                                                   @-moz-keyframes shake {
-                                                                      10%,90% { transform:translate3d(-1px,0,0) }
-                                                                      20%, 80% { transform:translate3d(2px,0,0) }
-                                                                      30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                                      40%, 60% { transform:translate3d(4px,0,0) }
-                                                                   }
-                                                                   #image19{
-                                                                    width: 320px; /* Set the container width as per your requirements */
-                                                                    height: 520px; /* Set the container height as per your requirements */
-                                                                    position: absolute;
-                                                                    top: 1240px; /* Position from the top (adjust as needed) */
-                                                                    left: 850px;
-                                                                }
-                                                                #image19:hover, .shakeimg:hover {
-                                                                         animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                         -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                         -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                         -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                         transform:translate3d(0,0,0); 
-                                                                         backface-visibility:hidden; 
-                                                                         perspective:1000px;
-                                                                      }
-                                                                
-                                                                      @keyframes shake { 
-                                                                         10%, 90% { transform:translate3d(-1px,0,0) }
-                                                                         20%, 80% { transform:translate3d(2px,0,0) }
-                                                                         30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                                         40%, 60% { transform:translate3d(4px,0,0) }
-                                                                      }
-                                                                
-                                                                      @-webkit-keyframes shake { 
-                                                                         10%, 90% { transform:translate3d(-1px,0,0) }
-                                                                         20%, 80% { transform:translate3d(2px,0,0) }
-                                                                         30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                                         40%, 60% { transform:translate3d(4px,0,0) }
-                                                                      }
-                                                                
-                                                                      @-moz-keyframes shake {
-                                                                         10%,90% { transform:translate3d(-1px,0,0) }
-                                                                         20%, 80% { transform:translate3d(2px,0,0) }
-                                                                         30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                                         40%, 60% { transform:translate3d(4px,0,0) }
-                                                                      }     
-                                                                       #image20{
-                                                                       width: 320px; /* Set the container width as per your requirements */
-                                                                       height: 520px; /* Set the container height as per your requirements */
-                                                                       position: absolute;
-                                                                       top: 1200px; /* Position from the top (adjust as needed) */
-                                                                       left: 1100px;
-                                                                   }
-                                                                   #image20:hover, .shakeimg:hover {
-                                                                            animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                            -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                            -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                            -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                            transform:translate3d(0,0,0); 
-                                                                            backface-visibility:hidden; 
-                                                                            perspective:1000px;
-                                                                         }
-                                                                   
-                                                                         @keyframes shake { 
-                                                                            10%, 90% { transform:translate3d(-1px,0,0) }
-                                                                            20%, 80% { transform:translate3d(2px,0,0) }
-                                                                            30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                                            40%, 60% { transform:translate3d(4px,0,0) }
-                                                                         }
-                                                                   
-                                                                         @-webkit-keyframes shake { 
-                                                                            10%, 90% { transform:translate3d(-1px,0,0) }
-                                                                            20%, 80% { transform:translate3d(2px,0,0) }
-                                                                            30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                                            40%, 60% { transform:translate3d(4px,0,0) }
-                                                                         }
-                                                                   
-                                                                         @-moz-keyframes shake {
-                                                                            10%,90% { transform:translate3d(-1px,0,0) }
-                                                                            20%, 80% { transform:translate3d(2px,0,0) }
-                                                                            30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                                            40%, 60% { transform:translate3d(4px,0,0) }
-                                                                         } 
-                                                                         #image21{
-                                                                           width: 320px; /* Set the container width as per your requirements */
-                                                                           height: 520px; /* Set the container height as per your requirements */
-                                                                           position: absolute;
-                                                                           top: 1500px; /* Position from the top (adjust as needed) */
-                                                                           left: 100px;
-                                                                       }
-                                                                       #image21:hover, .shakeimg:hover {
-                                                                                animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                                -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                                -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                                -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                                transform:translate3d(0,0,0); 
-                                                                                backface-visibility:hidden; 
-                                                                                perspective:1000px;
-                                                                             }
-                                                                       
-                                                                             @keyframes shake { 
-                                                                                10%, 90% { transform:translate3d(-1px,0,0) }
-                                                                                20%, 80% { transform:translate3d(2px,0,0) }
-                                                                                30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                                                40%, 60% { transform:translate3d(4px,0,0) }
-                                                                             }
-                                                                       
-                                                                             @-webkit-keyframes shake { 
-                                                                                10%, 90% { transform:translate3d(-1px,0,0) }
-                                                                                20%, 80% { transform:translate3d(2px,0,0) }
-                                                                                30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                                                40%, 60% { transform:translate3d(4px,0,0) }
-                                                                             }
-                                                                       
-                                                                             @-moz-keyframes shake {
-                                                                                10%,90% { transform:translate3d(-1px,0,0) }
-                                                                                20%, 80% { transform:translate3d(2px,0,0) }
-                                                                                30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                                                40%, 60% { transform:translate3d(4px,0,0) }
-                                                                             }
-                                                                             #image22{
-                                                                                width: 320px; /* Set the container width as per your requirements */
-                                                                                height: 520px; /* Set the container height as per your requirements */
-                                                                                position: absolute;
-                                                                                top: 1500px; /* Position from the top (adjust as needed) */
-                                                                                left: 350px;
-                                                                            }
-                                                                            #image22:hover, .shakeimg:hover {
-                                                                                     animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                                     -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                                     -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                                     -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                                     transform:translate3d(0,0,0); 
-                                                                                     backface-visibility:hidden; 
-                                                                                     perspective:1000px;
-                                                                                  }
-                                                                            
-                                                                                  @keyframes shake { 
-                                                                                     10%, 90% { transform:translate3d(-1px,0,0) }
-                                                                                     20%, 80% { transform:translate3d(2px,0,0) }
-                                                                                     30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                                                     40%, 60% { transform:translate3d(4px,0,0) }
-                                                                                  }
-                                                                            
-                                                                                  @-webkit-keyframes shake { 
-                                                                                     10%, 90% { transform:translate3d(-1px,0,0) }
-                                                                                     20%, 80% { transform:translate3d(2px,0,0) }
-                                                                                     30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                                                     40%, 60% { transform:translate3d(4px,0,0) }
-                                                                                  }
-                                                                            
-                                                                                  @-moz-keyframes shake {
-                                                                                     10%,90% { transform:translate3d(-1px,0,0) }
-                                                                                     20%, 80% { transform:translate3d(2px,0,0) }
-                                                                                     30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                                                     40%, 60% { transform:translate3d(4px,0,0) }
-                                                                                  }
-                                                                            
-                                                                                  #image23{
-                                                                                   width: 320px; /* Set the container width as per your requirements */
-                                                                                   height: 520px; /* Set the container height as per your requirements */
-                                                                                   position: absolute;
-                                                                                   top: 1500px; /* Position from the top (adjust as needed) */
-                                                                                   left: 600px;
-                                                                               }
-                                                                               #image23:hover, .shakeimg:hover {
-                                                                                        animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                                        -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                                        -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                                        -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                                        transform:translate3d(0,0,0); 
-                                                                                        backface-visibility:hidden; 
-                                                                                        perspective:1000px;
-                                                                                     }
-                                                                               
-                                                                                     @keyframes shake { 
-                                                                                        10%, 90% { transform:translate3d(-1px,0,0) }
-                                                                                        20%, 80% { transform:translate3d(2px,0,0) }
-                                                                                        30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                                                        40%, 60% { transform:translate3d(4px,0,0) }
-                                                                                     }
-                                                                               
-                                                                                     @-webkit-keyframes shake { 
-                                                                                        10%, 90% { transform:translate3d(-1px,0,0) }
-                                                                                        20%, 80% { transform:translate3d(2px,0,0) }
-                                                                                        30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                                                        40%, 60% { transform:translate3d(4px,0,0) }
-                                                                                     }
-                                                                               
-                                                                                     @-moz-keyframes shake {
-                                                                                        10%,90% { transform:translate3d(-1px,0,0) }
-                                                                                        20%, 80% { transform:translate3d(2px,0,0) }
-                                                                                        30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                                                        40%, 60% { transform:translate3d(4px,0,0) }
-                                                                                     }
-                                                                                     #image24{
-                                                                                      width: 320px; /* Set the container width as per your requirements */
-                                                                                      height: 520px; /* Set the container height as per your requirements */
-                                                                                      position: absolute;
-                                                                                      top: 1500px; /* Position from the top (adjust as needed) */
-                                                                                      left: 850px;
-                                                                                  }
-                                                                                  #image24:hover, .shakeimg:hover {
-                                                                                           animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                                           -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                                           -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                                           -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                                           transform:translate3d(0,0,0); 
-                                                                                           backface-visibility:hidden; 
-                                                                                           perspective:1000px;
-                                                                                        }
-                                                                                  
-                                                                                        @keyframes shake { 
-                                                                                           10%, 90% { transform:translate3d(-1px,0,0) }
-                                                                                           20%, 80% { transform:translate3d(2px,0,0) }
-                                                                                           30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                                                           40%, 60% { transform:translate3d(4px,0,0) }
-                                                                                        }
-                                                                                  
-                                                                                        @-webkit-keyframes shake { 
-                                                                                           10%, 90% { transform:translate3d(-1px,0,0) }
-                                                                                           20%, 80% { transform:translate3d(2px,0,0) }
-                                                                                           30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                                                           40%, 60% { transform:translate3d(4px,0,0) }
-                                                                                        }
-                                                                                  
-                                                                                        @-moz-keyframes shake {
-                                                                                           10%,90% { transform:translate3d(-1px,0,0) }
-                                                                                           20%, 80% { transform:translate3d(2px,0,0) }
-                                                                                           30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                                                           40%, 60% { transform:translate3d(4px,0,0) }
-                                                                                        }     
-                                                                                         #image25{
-                                                                                         width: 320px; /* Set the container width as per your requirements */
-                                                                                         height: 520px; /* Set the container height as per your requirements */
-                                                                                         position: absolute;
-                                                                                         top: 1500px; /* Position from the top (adjust as needed) */
-                                                                                         left: 1100px;
-                                                                                     }
-                                                                                     #image25:hover, .shakeimg:hover {
-                                                                                              animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                                              -moz-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                                              -webkit-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                                              -o-animation:shake .82s cubic-bezier(.36,.07,.19,.97) both; 
-                                                                                              transform:translate3d(0,0,0); 
-                                                                                              backface-visibility:hidden; 
-                                                                                              perspective:1000px;
-                                                                                           }
-                                                                                     
-                                                                                           @keyframes shake { 
-                                                                                              10%, 90% { transform:translate3d(-1px,0,0) }
-                                                                                              20%, 80% { transform:translate3d(2px,0,0) }
-                                                                                              30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                                                              40%, 60% { transform:translate3d(4px,0,0) }
-                                                                                           }
-                                                                                     
-                                                                                           @-webkit-keyframes shake { 
-                                                                                              10%, 90% { transform:translate3d(-1px,0,0) }
-                                                                                              20%, 80% { transform:translate3d(2px,0,0) }
-                                                                                              30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                                                              40%, 60% { transform:translate3d(4px,0,0) }
-                                                                                           }
-                                                                                     
-                                                                                           @-moz-keyframes shake {
-                                                                                              10%,90% { transform:translate3d(-1px,0,0) }
-                                                                                              20%, 80% { transform:translate3d(2px,0,0) }
-                                                                                              30%, 50%, 70% { transform:translate3d(-4px,0,0) }
-                                                                                              40%, 60% { transform:translate3d(4px,0,0) }
-                                                                                           } 
+.link4 {
+    position: absolute;
+    bottom: 200px; /* Adjust bottom position of link 4 as needed */
+    right: 400px; /* Adjust right position of link 4 as needed */
+    color: white; /* Adjust link color as needed */
+    font-size: 20px; /* Adjust link font size as needed */
+    z-index: 2; /* Ensure link is above the video background */
+}
+
+.link5 {
+    position: absolute;
+    top: 50%; /* Adjust top position of link 5 as needed */
+    left: 35%; /* Adjust left position of link 5 as needed */
+    transform: translate(-50%, -50%);
+    color: white; /* Adjust link color as needed */
+    font-size: 20px; /* Adjust link font size as needed */
+    z-index: 2; /* Ensure link is above the video background */
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Adjust text color as needed */
+    font-size: 24px; /* Adjust font size as needed */
+    text-align: center;
+    z-index: 1;
+}

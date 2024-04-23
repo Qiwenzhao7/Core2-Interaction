@@ -1,0 +1,8 @@
+.image-container {
+    display: flex; /* Use flexbox layout */
+}
+
+.image-container img {
+    width: 20%; /* Each image takes up 20% of the container width */
+    height: auto; /* Maintain aspect ratio */
+}
