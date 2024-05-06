@@ -22,9 +22,13 @@ fetch(URL)
         // log the data
         render(Data);
     });
+// Clouds Thunderstorm Drizzle Rain Snow Clear Haze
+
+
 
 function render(data) {
     console.log(data);
+    var currentCondition = data.weather[0].nain
 }
 
 // function render(data) {
