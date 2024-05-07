@@ -66,3 +66,39 @@ h1{
     margin: 3%;
     font-size: 40px;
 }
+h2{
+    color:rgba(249, 166, 194, 0.83) ;
+    margin: 8%;
+    font-size:90px;
+    text-align: center;
+}
+.hover-link:hover {
+    color: rgb(255, 105, 183); /* Change text color to blue on hover */
+    text-decoration: underline; /* Add underline on hover */
+    cursor: pointer; /* Change cursor style to pointer on hover */
+
+}
+.hover-link {
+    text-decoration: none; /* Remove default underline */
+    color: black; /* Set default text color */
+    position: relative; /* Ensure proper positioning of pseudo-element */
+}
+
+.hover-link:before {
+    color: rgb(0, 0, 0); /* Change text color to blue on hover */
+    text-decoration: underline; /* Add underline on hover */
+    cursor: pointer; /* Change cursor style to pointer on hover */
+}
+
+h3{
+    color:rgba(249, 166, 194, 0.83) ;
+    margin:3%;
+    font-size: 80px;
+    text-align: center;
+}
+h4{
+    color:rgba(249, 166, 194, 0.83) ;
+    margin:1%;
+    font-size: 30px;
+    text-align: center;
+}
