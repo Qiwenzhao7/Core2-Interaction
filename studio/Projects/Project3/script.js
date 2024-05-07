@@ -29,6 +29,35 @@ fetch(URL)
 function render(data) {
     console.log(data);
     var currentCondition = data.weather[0].nain
+    var videoSourceElement = document.querySelector('video source');
+var currentCondition = data.weather[0].main;
+
+switch (currentCondition) {
+	case 'Clouds':
+		videoSourceElement.src = 'clouds.mp4';
+		break;
+	case 'Thunderstorm':
+		videoSourceElement.src = 'thunderstorm.mp4';
+		break;
+	case 'Drizzle':
+		videoSourceElement.src = 'drizzle.mp4';
+		break;
+	case 'Rain':
+		videoSourceElement.src = 'rain.mp4';
+		break;
+	case 'Snow':
+		videoSourceElement.src = 'snow.mp4';
+		break;
+	case 'Clear':
+		videoSourceElement.src = 'clear.mp4';
+		break;
+	case 'Haze':
+		videoSourceElement.src = 'haze.mp4';
+		break;
+	default:
+		videoSourceElement.src = 'default.mp4';
+		break;
+}
 }
 
 // function render(data) {
