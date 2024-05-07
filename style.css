@@ -16,11 +16,12 @@
 .photo-item img {
     max-width: 100%; /* Ensure the images don't exceed the photo item's width */
     height: auto;
+    
 }
 .photo-item {
     overflow: hidden;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(251, 189, 228, 0.754);
     max-width: 100%; /* Ensure the photo items don't exceed the container's width */
     position: relative; /* Position for caption */
     transition: transform 0.3s ease; /* Add transition for smoother effect */
@@ -46,7 +47,7 @@ figcaption {
     left: 0;
     width: 100%;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(255, 175, 202, 0.7);
     color: #fff;
     text-align: center;
     font-size: 14px;
@@ -56,4 +57,12 @@ figcaption {
 
 .photo-item:hover figcaption {
     bottom: 0; /* Show the description on hover */
+}
+body,html {
+    background-color: rgb(255, 247, 221);
+}
+h1{
+    color:rgba(249, 166, 194, 0.83) ;
+    margin: 3%;
+    font-size: 40px;
 }
